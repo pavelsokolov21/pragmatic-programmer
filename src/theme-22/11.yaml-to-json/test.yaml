@@ -1,0 +1,8 @@
+name: Pavel Sokolov
+age: 23
+city: Tver
+arr:
+  - foo
+  - bar
+obj:
+  field1: value1
