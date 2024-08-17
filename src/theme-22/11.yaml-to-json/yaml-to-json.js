@@ -9,6 +9,7 @@ const splitFileAndPath = (path) => {
   return [pathWithoutFile.join("/"), fileName];
 };
 
+// TODO: Использовать Bun.resolveSync
 export const yamlToJSON = (path = ".") => {
   const glob = new Glob("**/*.yaml");
 

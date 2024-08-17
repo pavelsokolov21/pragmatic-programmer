@@ -9,6 +9,8 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "acorn": "^8.12.1",
+    "escodegen": "^2.1.0",
     "js-yaml": "^4.1.0"
   }
 }
