@@ -79,11 +79,7 @@ describe("parseHour", () => {
     "should validate hour and throw error %#",
     (data) => {
       expect(() => {
-        try {
-          parseHour(data);
-        } catch (err) {
-          throw err;
-        }
+        parseHour(data);
       }).toThrow("Invalid hour");
     }
   );
@@ -104,11 +100,7 @@ describe("parseMinute", () => {
     "should validate minute and throw error %#",
     (data) => {
       expect(() => {
-        try {
-          parseMinute(data);
-        } catch (err) {
-          throw err;
-        }
+        parseMinute(data);
       }).toThrow("Invalid minutes");
     }
   );
@@ -132,11 +124,7 @@ describe("parseAmPm", () => {
 
   it("should validate ampm and throw error", () => {
     expect(() => {
-      try {
-        parseAmPm("foo");
-      } catch (err) {
-        throw err;
-      }
+      parseAmPm("foo");
     }).toThrow("Invalid am/pm indicator");
   });
 });
@@ -185,11 +173,7 @@ describe("dateAnalyze", () => {
     "should validate time and throw error %#",
     (data) => {
       expect(() => {
-        try {
-          dateAnalyze(data);
-        } catch (err) {
-          throw err;
-        }
+        dateAnalyze(data);
       }).toThrow("Invalid date structure");
     }
   );

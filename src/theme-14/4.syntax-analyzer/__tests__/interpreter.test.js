@@ -11,11 +11,7 @@ describe("readFile", () => {
     "should throw error if path is invalid",
     (path) => {
       expect(async () => {
-        try {
-          await readFile(path);
-        } catch (err) {
-          throw err;
-        }
+        await readFile(path);
       }).toThrow("Invalid path");
     }
   );
@@ -38,11 +34,7 @@ describe("readFile", () => {
     }));
 
     expect(async () => {
-      try {
-        await readFile("some-path");
-      } catch (err) {
-        throw err;
-      }
+      await readFile("some-path");
     }).toThrow("No such file or directory");
   });
 });
@@ -91,11 +83,7 @@ describe("interpret", () => {
 
   it("should throw error on empty argument", () => {
     const fn = () => {
-      try {
-        interpretWithProgram("A 1\nB\nC");
-      } catch (err) {
-        throw err;
-      }
+      interpretWithProgram("A 1\nB\nC");
     };
 
     expect(fn).toThrow("Command 'B' requires an argument");
@@ -109,11 +97,7 @@ describe("interpret", () => {
 
   it("should throw error if program has unexpected command", () => {
     const fn = () => {
-      try {
-        interpretWithProgram("A 1\nB 2\nD");
-      } catch (err) {
-        throw err;
-      }
+      interpretWithProgram("A 1\nB 2\nD");
     };
 
     expect(fn).toThrow("Command 'D' is unexpected");
