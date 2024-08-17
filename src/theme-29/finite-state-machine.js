@@ -1,4 +1,4 @@
-class FSM {
+export class FSM {
   constructor(initialState, states) {
     this.initialState = initialState;
     this.states = states;
@@ -8,7 +8,13 @@ class FSM {
 
   subscribe(fn, state) {
     if (!state) {
-      console.error(`Cannot subscribe without state`);
+      console.error("Cannot subscribe without state");
+
+      return;
+    }
+
+    if (!this.subscribers.has(state)) {
+      console.error(`'${state}' does not exist on state machine`);
 
       return;
     }
