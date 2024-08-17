@@ -1,3 +1,5 @@
+// NOTE: Также можно доработать, чтобы подписчики получали value
+// текущего состояния вместо просто уведомления
 export class FSM {
   constructor(initialState, states) {
     this.initialState = initialState;
